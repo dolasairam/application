@@ -1,0 +1,7 @@
+from sqlite3 import *
+conn= connect('store.db')
+c=conn.cursor()
+c.excute("""(create table student(name text, address text, age real, moblie text)""")
+c.excute("insert into student values('sanjay','lpu',29,'456')")
+conn.commit()
+conn.close()
